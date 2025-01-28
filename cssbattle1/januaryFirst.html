@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Custom utilities in Tailwind */
-    @layer utilities {
-      .p-shape {
-        width: 40px;
-        height: 180px;
-        background: #ffffff;
-        box-shadow: 80px 0 #FFFFFF, 160px 0 #FFFFFF, 240px 0 #FFFFFF, 0 0 0 500px #3F9461;
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom utilities in Tailwind */
+      @layer utilities {
+        .p-shape {
+          box-shadow: 80px 0 #ffffff, 160px 0 #ffffff, 240px 0 #ffffff,
+            0 0 0 500px #3f9461;
+        }
+        .p-shape::before {
+          box-shadow: 80px -70px #ffffff, 160px 70px #ffffff, 239px 0 #ffffff;
+        }
       }
-      .p-shape::before {
-        content: '';
-        position: absolute;
-        width: 41px;
-        height: 40px;
-        background: #FFFFFF;
-        left: 40px;
-        top: 70px;
-        box-shadow: 80px -70px #FFFFFF, 160px 70px #FFFFFF, 239px 0 #FFFFFF;
-      }
-    }
-  </style>
-</head>
-<body class="bg-[#3F9461] flex justify-center items-center min-h-screen">
-  <div class="relative">
-    <p class="p-shape relative"></p>
-  </div>
-</body>
+    </style>
+  </head>
+  <body class="bg-[#3F9461] flex justify-center items-center min-h-screen">
+    <div class="relative">
+      <p
+        class="p-shape relative w-10 h-[180px] bg-white before:absolute before:w-[41px] before:h-10 before:bg-white before:left-10 before:top-[70px]"
+      ></p>
+    </div>
+  </body>
 </html>
