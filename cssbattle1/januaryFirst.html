@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom utilities in Tailwind */
+    @layer utilities {
+      .p-shape {
+        width: 40px;
+        height: 180px;
+        background: #ffffff;
+        box-shadow: 80px 0 #FFFFFF, 160px 0 #FFFFFF, 240px 0 #FFFFFF, 0 0 0 500px #3F9461;
+      }
+      .p-shape::before {
+        content: '';
+        position: absolute;
+        width: 41px;
+        height: 40px;
+        background: #FFFFFF;
+        left: 40px;
+        top: 70px;
+        box-shadow: 80px -70px #FFFFFF, 160px 70px #FFFFFF, 239px 0 #FFFFFF;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#3F9461] flex justify-center items-center min-h-screen">
+  <div class="relative">
+    <p class="p-shape relative"></p>
+  </div>
+</body>
+</html>
