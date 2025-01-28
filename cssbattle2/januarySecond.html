@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom utilities in Tailwind */
+      @layer utilities {
+        .p-shape {
+          box-shadow: 0 180px#F5BB60, 120px 0 #f5bb60, 120px 180px #f5bb60,
+            240px 0 #f5bb60, 240px 180px #f5bb60, 0 0 0 500px #2f5a76;
+        }
+        .p-shape::before {
+          box-shadow: 60px 0 #f5bb60, 120px 0 #f5bb60, 180px 0 #f5bb60,
+            240px 0 #f5bb60, 300px 0 #f5bb60;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#2F5A76] flex justify-center items-center min-h-screen">
+    <div class="relative">
+      <p
+        class="p-shape w-[90px] h-[30px] bg-[#F5BB60] mx-[45px] my-[27px] before:absolute before:w-[30px] before:h-[90px] before:bg-[#f5bb60] before:top-[90px]"
+      ></p>
+    </div>
+  </body>
+</html>
