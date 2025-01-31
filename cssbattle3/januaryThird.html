@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom utilities in Tailwind */
+      @layer utilities {
+        .p-shape {
+          background: linear-gradient(
+              to bottom,
+              #0000 0 70px,
+              #469dba 70px 120px,
+              #0000 120px 190px
+            ),
+            radial-gradient(
+              circle at 250px 2px,
+              #0000 0px 69px,
+              #469dba 69px 120px,
+              #0000 0
+            );
+          -webkit-box-reflect: below -180px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#F5E3B5] flex justify-center items-center min-h-screen">
+    <p class="p-shape w-[245px] h-[190px]"></p>
+  </body>
+</html>
